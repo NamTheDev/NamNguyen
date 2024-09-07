@@ -1,0 +1,167 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #282c34;
+    color: #e6e6e6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Animated background gradient */
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(45deg, #282c34, #4a0000, #8b0000);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Keyframes for background gradient animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Section styling */
+.section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Heading styles */
+h1, h2 {
+    color: #ff8080;
+    margin-bottom: 15px;
+    text-shadow: 0 0 1px #ff8080;
+}
+
+/* Custom button styles */
+.btn-custom {
+    background-color: #3b4048;
+    color: #e6e6e6;
+    border: none;
+    margin: 5px 0;
+    padding: 5px 10px;
+}
+
+.btn-custom:hover {
+    background-color: #8b0000;
+    color: #ffffff;
+}
+
+/* Header gradient background */
+.gradient-header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px 0;
+    color: #ffffff;
+}
+
+/* Paragraph and list item styles */
+p, li {
+    font-size: 16px;
+}
+
+/* Typing animation container */
+.typing-container {
+    display: inline-block;
+}
+
+/* Typing animation styles */
+.typing-animation {
+    overflow: hidden;
+    border-right: 2px solid #ffffff;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    animation: 
+        typing 1.5s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+    color: #ffffff;
+    text-shadow: 0 0 1px #ff8080;
+}
+
+/* Keyframes for typing animation */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Keyframes for cursor blink animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ffffff; }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .typing-animation {
+        font-size: 24px;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    .gradient-header .row {
+        flex-direction: column;
+    }
+    .gradient-header .col-md-4,
+    .gradient-header .col-md-8 {
+        text-align: center !important;
+    }
+    .typing-container {
+        display: block;
+    }
+    .typing-animation {
+        display: inline-block;
+    }
+}
+
+/* Custom scrollbar styles for WebKit browsers */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e2127;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4a0000;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #8b0000;
+}
+
+/* Custom scrollbar styles for Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #4a0000 #1e2127;
+}
+
+/* Footer styles */
+.footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    color: #e6e6e6;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer .btn-custom {
+    background-color: transparent;
+    border: 1px solid #e6e6e6;
+    transition: all 0.3s ease;
+}
+
+.footer .btn-custom:hover {
+    background-color: #8b0000;
+    border-color: #8b0000;
+}
