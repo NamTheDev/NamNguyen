@@ -20,18 +20,12 @@
     <!-- Header section with gradient background -->
     <header class="gradient-header">
         <div class="container">
-            <div class="row align-items-center">
-                <!-- Profile picture column -->
-                <div class="col-md-4 text-center text-md-end">
-                    <img src="assets/Nam.png" alt="Nguyen Thien Nam" class="img-fluid rounded-circle mb-3 profile-picture" style="width: 150px; height: 150px; object-fit: cover;">
+            <div class="d-flex flex-column align-items-center">
+                <img src="assets/Nam.png" alt="Nguyen Thien Nam" class="profile-picture mb-3">
+                <div class="typing-container">
+                    <h1>Nguyen Thien Nam</h1>
                 </div>
-                <!-- Name and title column -->
-                <div class="col-md-8 text-center text-md-start">
-                    <div class="typing-container">
-                        <h1 class="display-4 typing-animation">Nguyen Thien Nam</h1>
-                    </div>
-                    <p class="lead mt-3">Creative Professional</p>
-                </div>
+                <p class="lead mt-2">Creative Professional</p>
             </div>
         </div>
     </header>
@@ -39,74 +33,62 @@
     <!-- Main content area -->
     <main class="container mt-4">
         <!-- About Me and Skills section -->
-        <div class="row">
-            <!-- About Me column -->
-            <div class="col-md-6 section" id="identity">
-                <h2>About Me</h2>
-                <p>Name: Nguyen Thien Nam</p>
-                <p>Location: Viet Nam</p>
-                <p>Creative professional with diverse skills.</p>
-            </div>
+        <section class="mb-4" id="identity">
+            <h2>About Me</h2>
+            <p>Name: Nguyen Thien Nam</p>
+            <p>Location: Viet Nam</p>
+            <p>Creative professional with diverse skills.</p>
+        </section>
 
-            <!-- Skills column -->
-            <div class="col-md-6 section" id="expertise">
-                <h2>Skills</h2>
-                <ul class="list-unstyled">
-                    <li>Music Production</li>
-                    <li>Painting & Traditional Art</li>
-                    <li>Software Engineering</li>
-                    <li>Web Development</li>
-                    <li>Film Production</li>
-                    <li>Content Creation</li>
-                </ul>
-            </div>
-        </div>
+        <!-- Skills section -->
+        <section class="mb-4" id="expertise">
+            <h2>Skills</h2>
+            <ul class="list-unstyled">
+                <li>Music Production</li>
+                <li>Painting & Traditional Art</li>
+                <li>Software Engineering</li>
+                <li>Web Development</li>
+                <li>Film Production</li>
+                <li>Content Creation</li>
+            </ul>
+        </section>
 
-        <!-- Community and Contact section -->
-        <div class="row mt-4">
-            <!-- Community column with Discord widget -->
-            <div class="col-md-6 section" id="community">
-                <div class="d-flex flex-column align-items-center">
-                    <h2>Community</h2>
-                    <p>Founder of The Skinwalker game community on Roblox (The Hunters).</p>
-                    <iframe src="https://discord.com/widget?id=1281835923591659642&theme=dark" width="350" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-                </div>
+        <!-- Community section -->
+        <section class="mb-4" id="community">
+            <h2>Community</h2>
+            <p>Founder of The Skinwalker game community on Roblox (The Hunters).</p>
+            <div class="discord-widget">
+                <iframe src="https://discord.com/widget?id=1281835923591659642&theme=dark" width="100%" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
             </div>
+        </section>
 
-            <!-- Contact and Socials column -->
-            <div class="col-md-6 section" id="contact">
-                <h2>Contact & Socials</h2>
-                <p>
-                    <a href="mailto:soulviral8@gmail.com" class="text-decoration-none text-light">
-                        <i class="fas fa-envelope"></i> soulviral8@gmail.com
-                    </a>
-                </p>
-                <p><i class="fab fa-discord"></i> thien.nam.nguyen</p>
-                <a href="https://youtube.com/@nguyen_thien_nam" target="_blank" class="btn btn-custom">
-                    <i class="fab fa-youtube"></i> YouTube
+        <!-- Contact and Socials section -->
+        <section class="mb-4" id="contact">
+            <h2>Contact & Socials</h2>
+            <p>
+                <a href="mailto:soulviral8@gmail.com" class="text-decoration-none text-light">
+                    <i class="fas fa-envelope"></i> soulviral8@gmail.com
                 </a>
-            </div>
-        </div>
+            </p>
+            <p><i class="fab fa-discord"></i> thien.nam.nguyen</p>
+            <a href="https://youtube.com/@nguyen_thien_nam" target="_blank" class="btn btn-custom">
+                <i class="fab fa-youtube"></i> YouTube
+            </a>
+        </section>
 
         <!-- Projects section -->
-        <div class="row mt-4">
-            <div class="col-12 section">
-                <h2>Projects</h2>
-                <a href="https://mask-xpuq.onrender.com" target="_blank" class="btn btn-custom">
-                    <i class="fas fa-mask"></i> Mask Project
-                </a>
-            </div>
-        </div>
+        <section class="mb-4" id="projects">
+            <h2>Projects</h2>
+            <a href="https://mask-xpuq.onrender.com" target="_blank" class="btn btn-custom">
+                <i class="fas fa-mask"></i> Mask Project
+            </a>
+        </section>
     </main>
 
     <!-- Footer section -->
     <footer class="footer mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p>&copy; 2024 Nguyen Thien Nam. All rights reserved.</p>
-                </div>
-            </div>
+        <div class="container text-center">
+            <p>&copy; 2024 Nguyen Thien Nam. All rights reserved.</p>
         </div>
     </footer>
 

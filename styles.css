@@ -27,9 +27,11 @@ body {
 }
 
 /* Section styling */
-.section {
-    padding: 20px 0;
-    text-align: center;
+section {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 /* Heading styles */
@@ -45,7 +47,9 @@ h1, h2 {
     color: #e6e6e6;
     border: none;
     margin: 5px 0;
-    padding: 5px 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .btn-custom:hover {
@@ -56,8 +60,16 @@ h1, h2 {
 /* Header gradient background */
 .gradient-header {
     background: rgba(0, 0, 0, 0.5);
-    padding: 30px 0;
+    padding: 2rem 0;
     color: #ffffff;
+}
+
+/* Profile picture styles */
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 /* Paragraph and list item styles */
@@ -67,56 +79,35 @@ p, li {
 
 /* Typing animation container */
 .typing-container {
-    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
 }
 
-/* Typing animation styles */
-.typing-animation {
-    overflow: hidden;
-    border-right: 2px solid #ffffff;
-    white-space: nowrap;
-    margin: 0 auto;
-    letter-spacing: 2px;
-    animation: 
-        typing 1.5s steps(40, end),
-        blink-caret 0.75s step-end infinite;
+/* Update this section */
+h1 {
+    font-size: 2rem;
     color: #ffffff;
     text-shadow: 0 0 1px #ff8080;
 }
 
-/* Keyframes for typing animation */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
+/* In the media query, update this part */
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-/* Keyframes for cursor blink animation */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #ffffff; }
-}
+    section {
+        flex-basis: calc(50% - 10px);
+    }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .typing-animation {
-        font-size: 24px;
+    #community {
+        flex-basis: 100%;
     }
-}
 
-/* Media query for mobile devices */
-@media (max-width: 767px) {
-    .gradient-header .row {
-        flex-direction: column;
-    }
-    .gradient-header .col-md-4,
-    .gradient-header .col-md-8 {
-        text-align: center !important;
-    }
-    .typing-container {
-        display: block;
-    }
-    .typing-animation {
-        display: inline-block;
+    #contact, #projects {
+        flex-basis: calc(50% - 10px);
     }
 }
 
@@ -151,17 +142,8 @@ p, li {
     color: #e6e6e6;
 }
 
-.footer p {
-    margin-bottom: 10px;
-}
-
-.footer .btn-custom {
-    background-color: transparent;
-    border: 1px solid #e6e6e6;
-    transition: all 0.3s ease;
-}
-
-.footer .btn-custom:hover {
-    background-color: #8b0000;
-    border-color: #8b0000;
+/* Discord widget styles */
+.discord-widget {
+    overflow: hidden;
+    border-radius: 10px;
 }
