@@ -1,98 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyen Thien Nam - Portfolio</title>
-    <!-- Bootstrap CSS for responsive grid and components -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Font Awesome for icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/Nam.png">
-    <!-- Custom CSS file -->
-    <link href="styles.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Animated background div -->
-    <div class="animated-background"></div>
+    <title>Nam</title>
+    <link rel="shortcut icon" href="assets/profile-avatar.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            color: #ffffff;
+            background-color: #000000;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-    <!-- Header section with gradient background -->
-    <header class="gradient-header shadow">
-        <div class="container">
-            <div class="d-flex flex-column align-items-center">
-                <img src="assets/Nam.png" alt="Nguyen Thien Nam" class="profile-picture mb-3 shadow">
-                <div class="typing-container">
-                    <h1>Nguyen Thien Nam</h1>
-                </div>
-                <p class="lead mt-2">Creative Professional</p>
-            </div>
-        </div>
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        .project img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+            background-color: #333;
+            /* Placeholder background */
+            border: 3px solid #ffffff;
+            /* White border for profile picture */
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Updated styles for tabs */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ffffff;
+            background-color: #000000;
+            display: flex;
+            /* Use flexbox for better alignment */
+        }
+
+        .tab button {
+            background-color: inherit;
+            flex: 1;
+            /* Distribute space evenly */
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-family: inherit;
+            font-size: 1em;
+            color: #ffffff;
+        }
+
+        .tab button:hover {
+            background-color: #333;
+        }
+
+        .tab button.active {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            /* Increased padding for better spacing */
+            border: 1px solid #ffffff;
+            border-top: none;
+        }
+
+        /* New styles for project content alignment */
+        .project-content {
+            max-width: 600px;
+            /* Limit width for better readability */
+            margin: 0 auto;
+            /* Center the content */
+        }
+
+        .project-content h3 {
+            text-align: center;
+            /* Center the project title */
+            margin-bottom: 20px;
+            /* Add some space below the title */
+        }
+
+        .project-content img {
+            display: block;
+            /* Center the image */
+            margin: 0 auto 20px;
+            /* Add some space below the image */
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: #000000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #ffffff;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="profile-picture" src="assets/profile-avatar.png" alt="Your Profile Picture">
+        <h1>Nam</h1>
+        <p>A professional depressed idiot.</p>
     </header>
 
-    <!-- Main content area -->
-    <main class="container mt-4">
-        <!-- About Me and Skills section -->
-        <section class="mb-4 shadow" id="identity">
-            <h2>About Me</h2>
-            <p>Name: Nguyen Thien Nam</p>
-            <p>Location: Viet Nam</p>
-            <p>Creative professional with diverse skills.</p>
-        </section>
+    <section id="about">
+        <h2>About</h2>
+        <p>"Volatile & melioration." One of the major things in my life is to continuously improve in everything I do; art-making,
+        music-making, content creation, self-education, self-care, studying, coding... I'm in love with pushing myself to greater heights.</p>
+    </section>
 
-        <!-- Skills section -->
-        <section class="mb-4 shadow" id="expertise">
-            <h2>Skills</h2>
-            <ul class="list-unstyled">
-                <li>Music Production</li>
-                <li>Painting & Traditional Art</li>
-                <li>Software Engineering</li>
-                <li>Web Development</li>
-                <li>Film Production</li>
-                <li>Content Creation</li>
-            </ul>
-        </section>
-
-        <!-- Community section -->
-        <section class="mb-4 shadow" id="community">
-            <h2>Community</h2>
-            <p>Founder of The Skinwalker game community on Roblox (The Hunters).</p>
-            <div class="discord-widget shadow">
-                <iframe src="https://discord.com/widget?id=1281835923591659642&theme=dark" width="100%" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-            </div>
-        </section>
-
-        <!-- Contact and Socials section -->
-        <section class="mb-4 shadow" id="contact">
-            <h2>Contact & Socials</h2>
-            <p>
-                <a href="mailto:soulviral8@gmail.com" class="text-decoration-none text-light">
-                    <i class="fas fa-envelope"></i> soulviral8@gmail.com
-                </a>
-            </p>
-            <p><i class="fab fa-discord"></i> thien.nam.nguyen</p>
-            <a href="https://youtube.com/@nguyen_thien_nam" target="_blank" class="btn btn-custom shadow">
-                <i class="fab fa-youtube"></i> YouTube
-            </a>
-        </section>
-
-        <!-- Projects section -->
-        <section class="mb-4 shadow" id="projects">
-            <h2>Projects</h2>
-            <a href="https://mask-xpuq.onrender.com" target="_blank" class="btn btn-custom shadow">
-                <i class="fas fa-mask"></i> Mask Project
-            </a>
-        </section>
-    </main>
-
-    <!-- Footer section -->
-    <footer class="footer mt-5 shadow">
-        <div class="container text-center">
-            <p>&copy; 2024 Nguyen Thien Nam. All rights reserved.</p>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="tab">
+            <template id="tab-template">
+                <button class="tablinks" onclick="openProject(event, '{{ project.id }}')">{{ project.name }}</button>
+            </template>
         </div>
-    </footer>
 
-    <!-- Bootstrap JS for any interactive components -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <div id="projects-container">
+            <template id="project-template">
+                <div class="tabcontent" id="{{ project.id }}">
+                    <div class="project-content">
+                        <h3>{{ project.name }}</h3>
+                        <img src="{{ project.image }}" alt="{{ project.name }}" style="max-width: 600px;">
+                        <p>{{ project.description }}</p>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </section>
+
+    <section id="socials">
+        <h2>Socials</h2>
+        <p>Connect with me on:</p>
+        <ul>
+            <li><a href="https://github.com/NamTheDev">GitHub</a></li>
+            <li><a href="https://discord.com/users/1059384621550288907">Discord</a></li>
+            <li> <a href="https://youtube.com/@nguyen_thien_nam">YouTube</a></li>
+        </ul>
+    </section>
+
+    <script>
+        const projects = [
+            {
+                id: "mask",
+                title: "M4sk",
+                description: [
+                    "M4sk is a fun Discord bot designed to enhance user engagement through various interactive features.",
+                    "",
+                    "- Fun Commands: Includes economy and RPG adventure game systems.",
+                    "- Security: An advanced reporting system to warn about users with bad reputations.",
+                    "- Customization: Easy- to - edit responses and color options via a user - friendly dashboard.",
+                    "",
+                    "Overall, M4sk aims to create an entertaining and safe environment for Discord communities."
+                ].join("\n"),
+                image: "assets/mask-website.png",
+                alt: "Mask Website - Project"
+            },
+            {
+                id: "TBOH",
+                title: "The Blood of Heroes",
+                description: [
+                    "The Blood of Heroes is a text-based adventure where you play as Kaimen, a universe-hopping hero.",
+                    "You navigate through detailed scenes and make choices by typing your responses.",
+                    "",
+                    "The Reader is a key character, serving as your guide, quest giver, and merchant.",
+                    "You can buy hidden content with in-game coins, collected through exploration.",
+                    "",
+                    "Pay attention to scene details, weigh your choices carefully, and explore thoroughly to find coins.",
+                    "Interact with The Reader regularly for quests and progress updates.",
+                    "Your decisions shape the outcome of the story."
+                ].join("\n"),
+                image: "assets/tboh-game.png"
+            }
+        ];
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabTemplate = document.getElementById('tab-template');
+            const projectTemplate = document.getElementById('project-template');
+            const tabContainer = document.querySelector('.tab');
+            const projectContainer = document.getElementById('projects-container');
+
+            projects.forEach((project, index) => {
+                // Clone tab button template
+                const tabClone = document.importNode(tabTemplate.content, true);
+                const tabButton = tabClone.querySelector('button');
+                tabButton.textContent = project.title;
+                tabButton.onclick = (evt) => openProject(evt, project.id);
+                tabButton.id = index === 0 ? "defaultOpen" : ""; // Set the first project as default open
+
+                // Clone project content template
+                const projectClone = document.importNode(projectTemplate.content, true);
+                const projectDiv = projectClone.querySelector('.tabcontent');
+                projectDiv.id = project.id;
+                const projectImg = projectClone.querySelector('img');
+                projectImg.src = project.image;
+                projectImg.alt = project.alt;
+                projectClone.querySelector('h3').textContent = project.title;
+                projectClone.querySelector('p').textContent = project.description;
+
+                // Append cloned elements to their containers
+                tabContainer.appendChild(tabButton);
+                projectContainer.appendChild(projectDiv);
+            });
+
+            // Simulate a click on the first tab to show its content by default
+            document.getElementById("defaultOpen").click();
+        });
+
+        function openProject(evt, projectName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(projectName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
+
 </html>
