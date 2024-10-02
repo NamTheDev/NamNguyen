@@ -2,264 +2,108 @@
 <html lang="en">
 
 <head>
+    <!-- Character Encoding -->
     <meta charset="UTF-8">
+    <!-- Page Title -->
+    <title>Nguyen Thien Nam's Portfolio</title>
+    <!-- Link to External CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico">
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Responsive Viewport Meta Tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nam</title>
-    <link rel="shortcut icon" href="assets/profile-avatar.png" type="image/x-icon">
-    <style>
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            line-height: 1.6;
-            color: #ffffff;
-            background-color: #000000;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            font-size: 2.5em;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        .project img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        #profile-picture {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            display: block;
-            background-color: #333;
-            /* Placeholder background */
-            border: 3px solid #ffffff;
-            /* White border for profile picture */
-        }
-
-        a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Updated styles for tabs */
-        .tab {
-            overflow: hidden;
-            border: 1px solid #ffffff;
-            background-color: #000000;
-            display: flex;
-            /* Use flexbox for better alignment */
-        }
-
-        .tab button {
-            background-color: inherit;
-            flex: 1;
-            /* Distribute space evenly */
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-family: inherit;
-            font-size: 1em;
-            color: #ffffff;
-        }
-
-        .tab button:hover {
-            background-color: #333;
-        }
-
-        .tab button.active {
-            background-color: #ffffff;
-            color: #000000;
-        }
-
-        .tabcontent {
-            display: none;
-            padding: 20px;
-            /* Increased padding for better spacing */
-            border: 1px solid #ffffff;
-            border-top: none;
-        }
-
-        /* New styles for project content alignment */
-        .project-content {
-            max-width: 600px;
-            /* Limit width for better readability */
-            margin: 0 auto;
-            /* Center the content */
-        }
-
-        .project-content h3 {
-            text-align: center;
-            /* Center the project title */
-            margin-bottom: 20px;
-            /* Add some space below the title */
-        }
-
-        .project-content img {
-            display: block;
-            /* Center the image */
-            margin: 0 auto 20px;
-            /* Add some space below the image */
-        }
-
-        ::-webkit-scrollbar {
-            width: 10px;
-            background-color: #000000;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #ffffff;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background-color: #000000;
-        }
-    </style>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Nguyen Thien Nam's personal portfolio showcasing art, music, development projects, and more.">
+    <meta name="keywords" content="Nguyen Thien Nam, Portfolio, Art, Music, Development, Story Writing">
+    <meta name="author" content="Nguyen Thien Nam">
+    <!-- Open Graph Meta Tags for Social Media Sharing -->
+    <meta property="og:title" content="Nguyen Thien Nam's Portfolio">
+    <meta property="og:description"
+        content="Nguyen Thien Nam's personal portfolio showcasing art, music, development projects, and more.">
 </head>
 
 <body>
-    <header>
-        <img id="profile-picture" src="assets/profile-avatar.png" alt="Your Profile Picture">
-        <h1>Nam</h1>
-        <p>A professional depressed idiot.</p>
-    </header>
+    <!-- Light Mode Overlay (for Theme Toggle) -->
+    <div id="light-mode"></div>
 
-    <section id="about">
-        <h2>About</h2>
-        <p>"Volatile & melioration." One of the major things in my life is to continuously improve in everything I do; art-making,
-        music-making, content creation, self-education, self-care, studying, coding... I'm in love with pushing myself to greater heights.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="tab">
-            <template id="tab-template">
-                <button class="tablinks" onclick="openProject(event, '{{ project.id }}')">{{ project.name }}</button>
-            </template>
-        </div>
-
-        <div id="projects-container">
-            <template id="project-template">
-                <div class="tabcontent" id="{{ project.id }}">
-                    <div class="project-content">
-                        <h3>{{ project.name }}</h3>
-                        <img src="{{ project.image }}" alt="{{ project.name }}" style="max-width: 600px;">
-                        <p>{{ project.description }}</p>
-                    </div>
-                </div>
-            </template>
+    <!-- Cover Section (Hero Section) -->
+    <section id="cover">
+        <!-- Cover Content Container -->
+        <div class="cover-content invisible">
+            <!-- Portfolio Title (Will be populated dynamically) -->
+            <h1 id="portfolio-title"></h1>
+            <!-- Subtitle with Name Introduction -->
+            <p id="portfolio-subtitle">My name is <span id="info-name"></span>.</p>
         </div>
     </section>
 
-    <section id="socials">
-        <h2>Socials</h2>
-        <p>Connect with me on:</p>
+    <!-- Main Navigation Bar -->
+    <nav id="main-nav">
+        <!-- Navigation Toggle Button (for Mobile View) -->
+        <button id="nav-toggle">
+            <!-- Icon for Navigation Toggle -->
+            <i class="fa-solid fa-bars"></i>
+            <!-- Dropdown Menu for Mobile Navigation -->
+            <div id="nav-dropdown">
+                <!-- Navigation Links -->
+                <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+                <a href="#works"><i class="fa-solid fa-briefcase"></i> Works</a>
+                <a href="#social"><i class="fa-solid fa-share"></i> Socials</a>
+            </div>
+        </button>
+        <!-- Navigation Links for Desktop View -->
         <ul>
-            <li><a href="https://github.com/NamTheDev">GitHub</a></li>
-            <li><a href="https://discord.com/users/1059384621550288907">Discord</a></li>
-            <li> <a href="https://youtube.com/@nguyen_thien_nam">YouTube</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#social">Socials</a></li>
         </ul>
+        <!-- Theme Toggle Button (Light/Dark Mode) -->
+        <button id="theme-toggle" aria-label="Toggle Light/Dark Mode">
+            <!-- Icon for Theme Toggle -->
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <!-- Section Heading -->
+        <h2>About Me</h2>
+        <!-- Biography Paragraph (Will be populated dynamically) -->
+        <p id="biography"></p>
     </section>
 
-    <script>
-        const projects = [
-            {
-                id: "mask",
-                title: "M4sk",
-                description: [
-                    "M4sk is a fun Discord bot designed to enhance user engagement through various interactive features.",
-                    "",
-                    "- Fun Commands: Includes economy and RPG adventure game systems.",
-                    "- Security: An advanced reporting system to warn about users with bad reputations.",
-                    "- Customization: Easy- to - edit responses and color options via a user - friendly dashboard.",
-                    "",
-                    "Overall, M4sk aims to create an entertaining and safe environment for Discord communities."
-                ].join("\n"),
-                image: "assets/mask-website.png",
-                alt: "Mask Website - Project"
-            },
-            {
-                id: "TBOH",
-                title: "The Blood of Heroes",
-                description: [
-                    "The Blood of Heroes is a text-based adventure where you play as Kaimen, a universe-hopping hero.",
-                    "You navigate through detailed scenes and make choices by typing your responses.",
-                    "",
-                    "The Reader is a key character, serving as your guide, quest giver, and merchant.",
-                    "You can buy hidden content with in-game coins, collected through exploration.",
-                    "",
-                    "Pay attention to scene details, weigh your choices carefully, and explore thoroughly to find coins.",
-                    "Interact with The Reader regularly for quests and progress updates.",
-                    "Your decisions shape the outcome of the story."
-                ].join("\n"),
-                image: "assets/tboh-game.png"
-            }
-        ];
+    <!-- Works Section -->
+    <section id="works">
+        <!-- Section Heading -->
+        <h2>Works</h2>
+        <!-- Works Content Container (Will be populated dynamically) -->
+        <div id="works-content"></div>
+    </section>
 
-        document.addEventListener("DOMContentLoaded", () => {
-            const tabTemplate = document.getElementById('tab-template');
-            const projectTemplate = document.getElementById('project-template');
-            const tabContainer = document.querySelector('.tab');
-            const projectContainer = document.getElementById('projects-container');
+    <!-- Social Media Section -->
+    <section id="social">
+        <!-- Section Heading -->
+        <h2>Social Media</h2>
+        <!-- Social Links Container (Will be populated dynamically) -->
+        <div id="social-links"></div>
+    </section>
 
-            projects.forEach((project, index) => {
-                // Clone tab button template
-                const tabClone = document.importNode(tabTemplate.content, true);
-                const tabButton = tabClone.querySelector('button');
-                tabButton.textContent = project.title;
-                tabButton.onclick = (evt) => openProject(evt, project.id);
-                tabButton.id = index === 0 ? "defaultOpen" : ""; // Set the first project as default open
+    <!-- Footer Section -->
+    <footer id="contact">
+        <!-- Contact Information -->
+        <p>Contact me at <a href="#" id="email-link"></a></p>
+        <!-- Footer Text (e.g., Copyright) -->
+        <p id="footer-text"></p>
+    </footer>
 
-                // Clone project content template
-                const projectClone = document.importNode(projectTemplate.content, true);
-                const projectDiv = projectClone.querySelector('.tabcontent');
-                projectDiv.id = project.id;
-                const projectImg = projectClone.querySelector('img');
-                projectImg.src = project.image;
-                projectImg.alt = project.alt;
-                projectClone.querySelector('h3').textContent = project.title;
-                projectClone.querySelector('p').textContent = project.description;
-
-                // Append cloned elements to their containers
-                tabContainer.appendChild(tabButton);
-                projectContainer.appendChild(projectDiv);
-            });
-
-            // Simulate a click on the first tab to show its content by default
-            document.getElementById("defaultOpen").click();
-        });
-
-        function openProject(evt, projectName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(projectName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-    </script>
+    <!-- JavaScript Libraries and Scripts -->
+    <!-- FIGlet Library for ASCII Art Titles -->
+    <script src="https://cdn.jsdelivr.net/npm/figlet@latest"></script>
+    <!-- Main JavaScript File -->
+    <script src="script.js"></script>
 </body>
 
 </html>

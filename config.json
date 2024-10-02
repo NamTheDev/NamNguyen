@@ -1,0 +1,69 @@
+{
+    "personalInfo": {
+        "name": "Nguyen Thien Nam",
+        "title": "A Multi-Talented Individual in Art, Music, Development, Content Creation, and Story Writing",
+        "biography": "I am a homeschooled student who began drawing and playing piano at the age of 6. At 12, I started coding, and at 13, I picked up the saxophone. Despite facing challenges like periods of depression, I have grown into a positive and healthy 15-year-old. I enjoy exploring various creative fields and continually developing my skills."
+    },
+    "projects": {
+        "development": [
+            {
+                "name": "M4sk Discord Bot",
+                "description": "A versatile Discord bot offering fun and utility commands, including an economy system and RPG adventure game. Features customizable responses, embeds, and colors via a simple dashboard.",
+                "link": "https://mask-xpuq.onrender.com/homepage"
+            },
+            {
+                "name": "The Blood of Heroes",
+                "description": "A Discord bot that allows users to create and manage servers. Features customizable responses, embeds, and colors via a simple dashboard.",
+                "link": "https://mask-xpuq.onrender.com/homepage"
+            }
+        ],
+        "art": [
+            {
+                "title": "My Imagination",
+                "description": "An artwork representing my mental and psychological self, created purely from imagination.",
+                "image": "assets/images/my_imagination.jpg"
+            },
+            {
+                "title": "My Universe",
+                "description": "An artwork representing my imagination about space, solar systems, and other aspects of the universe.",
+                "image": "assets/images/my_universe.jpg"
+            }
+        ],
+        "music": [
+            {
+                "title": "Careless Whisper Performance",
+                "description": "A saxophone performance at Polygon in Hanoi, Vietnam, on May 25.",
+                "videoLink": "https://youtu.be/aeJ1oMfwDv8"
+            },
+            {
+                "title": "Home",
+                "description": "An original composition.",
+                "videoLink": "https://www.youtube.com/watch?v=zt2kS3zKKvQ"
+            },
+            {
+                "title": "Sunset",
+                "description": "An original composition.",
+                "videoLink": "https://www.youtube.com/watch?v=Hdk7zulaCC4"
+            }
+        ],
+        "contentCreation": [
+            {
+                "platform": "YouTube",
+                "channelName": "@nguyen_thien_nam",
+                "link": "https://www.youtube.com/@nguyen_thien_nam",
+                "description": "A collection of simple vlogs documenting my life and experiences."
+            }
+        ]
+    },
+    "socialMedia": {
+        "discord": "Your_Discord_Server_Invite_Link",
+        "youtube": "https://www.youtube.com/@nguyen_thien_nam",
+        "facebook": "Your_Facebook_Profile_Link"
+    },
+    "contactInfo": {
+        "email": "soul.isnt.here6@gmail.com"
+    },
+    "siteInfo": {
+        "copyright": "© 2024 Nguyen Thien Nam. All rights reserved."
+    }
+}

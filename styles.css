@@ -1,0 +1,424 @@
+/* ==================================================
+   Import Google Fonts
+   ================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@100;200;300;400;500;600;700&family=Shadows+Into+Light&display=swap');
+
+/* ==================================================
+   General Styles
+   ================================================== */
+
+/* Hide the scrollbar in WebKit browsers (Chrome, Safari) */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Global body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 1.5em;
+    font-style: normal;
+    color: #e0e0e0;
+
+    /* Background settings */
+    background-size: 100% 100%;
+    background-position: 0px 0px, 0px 0px;
+    background-image:
+        /* First gradient layer */
+        linear-gradient(45deg, rgba(255, 60, 0, 0.55) 0%, rgba(0, 63, 255, 0.7) 100%),
+        /* Second gradient layer */
+        radial-gradient(75% 75% at 50% 50%, #514F4F 0%, #393939 100%);
+}
+
+/* Light Mode Overlay (used for theme toggling) */
+#light-mode {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    backdrop-filter: invert(1);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* ==================================================
+   Cover Section Styles
+   ================================================== */
+
+/* Cover Section (full viewport height) */
+#cover {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    /* Center content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cover content container */
+.cover-content {
+    text-align: center;
+}
+
+/* Portfolio title styles */
+#portfolio-title {
+    font-size: 1em;
+    margin: 0;
+    color: #00c9c9;
+    /* Teal color */
+}
+
+/* Portfolio subtitle styles */
+#portfolio-subtitle {
+    margin-top: 10px;
+    font-size: 2em;
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Name styling within the subtitle */
+#info-name {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ==================================================
+   Navigation Styles
+   ================================================== */
+
+/* Main navigation bar */
+#main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 20px 0;
+    background-color: #1e1e1e;
+
+    /* Flex layout for horizontal alignment */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navigation list styles */
+#main-nav ul {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+/* Navigation list items */
+#main-nav li {
+    margin: 0 20px;
+}
+
+/* Navigation links */
+#main-nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+/* Hover effect on navigation links */
+#main-nav a:hover {
+    color: #008080;
+}
+
+/* Active navigation link */
+#main-nav a.active {
+    color: #008080;
+    border-bottom: 2px solid #008080;
+}
+
+/* Navigation buttons (theme toggle and nav toggle) */
+#main-nav button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: #e0e0e0;
+    cursor: pointer;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+/* Theme toggle button positioning */
+#main-nav #theme-toggle {
+    right: 0;
+}
+
+/* Navigation toggle button (for mobile view) */
+#main-nav #nav-toggle {
+    left: 0;
+    display: none;
+    /* Hidden by default, shown on mobile */
+}
+
+/* Hover effect on navigation buttons */
+#main-nav button:hover {
+    color: #008080;
+}
+
+/* Navigation dropdown menu (mobile view) */
+#main-nav #nav-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px 10px;
+    background-color: #1e1e1e;
+    border: 2px solid #008080;
+    gap: 10px;
+}
+
+/* Navigation dropdown links */
+#main-nav #nav-dropdown a {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+}
+
+/* Show navigation dropdown when active */
+#main-nav #nav-dropdown.show {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================================================
+   Section Styles
+   ================================================== */
+
+/* General section styles */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Section headings */
+section h2 {
+    margin-bottom: 40px;
+    color: #4e9d9d;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* About section paragraph */
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* ==================================================
+   Works Section Styles
+   ================================================== */
+
+/* Container for works content */
+#works-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual work sections */
+.work-section {
+    margin-bottom: 60px;
+}
+
+/* Work section headings */
+.work-section h3 {
+    margin-bottom: 30px;
+    color: #e0e0e0;
+    font-weight: 700;
+}
+
+/* Grid layout for work items */
+.work-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Individual work items */
+.work-item {
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+/* Hover effect on work items */
+.work-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Work item titles */
+.work-item h4 {
+    margin-bottom: 10px;
+    color: #008080;
+}
+
+/* Work item descriptions */
+.work-item p {
+    line-height: 1.4;
+}
+
+/* Work item links */
+.work-item a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Hover effect on work item links */
+.work-item a:hover {
+    color: #008080;
+}
+
+/* Artwork images */
+.artwork-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* ==================================================
+   Social Media Section Styles
+   ================================================== */
+
+/* Social links container */
+#social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Individual social links */
+#social-links a {
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Hover effect on social links */
+#social-links a:hover {
+    color: #008080;
+}
+
+/* Icons within social links */
+#social-links i {
+    margin-right: 10px;
+}
+
+/* ==================================================
+   Footer Styles
+   ================================================== */
+
+/* Footer container */
+footer {
+    padding: 20px 0;
+    background-color: #1e1e1e;
+    text-align: center;
+}
+
+/* Footer links */
+footer a {
+    color: #008080;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Hover effect on footer links */
+footer a:hover {
+    color: #e0e0e0;
+}
+
+/* ==================================================
+   Responsive Design
+   ================================================== */
+
+/* Media query for screens up to 768px wide */
+@media (max-width: 768px) {
+
+    /* Reduce portfolio title size */
+    #portfolio-title {
+        font-size: 0.4em;
+    }
+
+    /* Reduce portfolio subtitle size */
+    #portfolio-subtitle {
+        font-size: 1em;
+    }
+
+    /* Adjust navigation list items */
+    #main-nav li {
+        margin: 10px 0;
+    }
+
+    /* Stack work items in one column */
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Center text and add padding to sections */
+    section {
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    /* Adjust main navigation bar */
+    #main-nav {
+        height: 40px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    /* Hide navigation list (desktop menu) */
+    #main-nav ul {
+        display: none;
+    }
+
+    /* Show navigation toggle button (mobile menu) */
+    #main-nav #nav-toggle {
+        display: block;
+    }
+}
+
+/* ==================================================
+   Animation Classes
+   ================================================== */
+
+/* Class for elements before they become visible */
+.invisible {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Class for elements after they become visible */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
