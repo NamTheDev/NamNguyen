@@ -1,7 +1,7 @@
 /* ==================================================
    Import Google Fonts
    ================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@100;200;300;400;500;600;700&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Shadows+Into+Light&display=swap');
 
 /* ==================================================
    General Styles
@@ -19,7 +19,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-style: normal;
     color: #e0e0e0;
 
