@@ -463,7 +463,7 @@ footer a:hover {
         font-size: 0.6em;
     }
 
-    /* Reduce gap for each sections
+    /* Reduce gap for each sections */
     #sections-wrapper {
         gap: 0;
     }
