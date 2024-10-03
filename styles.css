@@ -461,8 +461,11 @@ footer a:hover {
     /* Center text and add padding to sections */
     section {
         font-size: 0.6em;
-        padding: 100px 20px;
-        min-height: fit-content;
+    }
+
+    /* Reduce gap for each sections
+    #sections-wrapper {
+        gap: 0;
     }
 
     /* Adjust main navigation bar */
