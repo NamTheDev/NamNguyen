@@ -2,7 +2,7 @@
     "personalInfo": {
         "name": "Nguyen Thien Nam",
         "title": "A Multi-Talented Individual in Art, Music, Development, Content Creation, and Story Writing",
-        "biography": "/assets/markdown/biography.md"
+        "biography": "./assets/markdown/biography.md"
     },
     "projects": {
         "development": [
@@ -21,12 +21,12 @@
             {
                 "title": "My Imagination",
                 "description": "An artwork representing my mental and psychological self, created purely from imagination.",
-                "image": "assets/images/my_imagination.png"
+                "image": "./assets/images/my_imagination.png"
             },
             {
                 "title": "My Universe",
                 "description": "An artwork representing my imagination about space, solar systems, and other aspects of the universe.",
-                "image": "assets/images/my_universe.png"
+                "image": "./assets/images/my_universe.png"
             }
         ],
         "music": [
