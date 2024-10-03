@@ -2,7 +2,7 @@
     "personalInfo": {
         "name": "Nguyen Thien Nam",
         "title": "A Multi-Talented Individual in Art, Music, Development, Content Creation, and Story Writing",
-        "biography": "/assets/markdown/biography.md"
+        "biography": "assets/markdown/biography.md"
     },
     "projects": {
         "development": [
