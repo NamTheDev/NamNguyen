@@ -2,18 +2,18 @@
     "personalInfo": {
         "name": "Nguyen Thien Nam",
         "title": "A Multi-Talented Individual in Art, Music, Development, Content Creation, and Story Writing",
-        "biography": "I am a homeschooled student who began drawing and playing piano at the age of 6. At 12, I started coding, and at 13, I picked up the saxophone. Despite facing challenges like periods of depression, I have grown into a positive and healthy 15-year-old. I enjoy exploring various creative fields and continually developing my skills."
+        "biography": "/assets/markdown/biography.md"
     },
     "projects": {
         "development": [
             {
                 "name": "M4sk Discord Bot",
-                "description": "A versatile Discord bot offering fun and utility commands, including an economy system and RPG adventure game. Features customizable responses, embeds, and colors via a simple dashboard.",
+                "description": "A versatile Discord bot offering fun and utility commands, including an economy system and RPG adventure game. Not only that, M4sk provides a reputation-based system for moderation which can help moderators, administrators and owners manage the server way more efficient. There are also features for customizable responses, embeds, and colors via a simple dashboard.",
                 "link": "https://mask-xpuq.onrender.com/homepage"
             },
             {
                 "name": "The Blood of Heroes",
-                "description": "A Discord bot that allows users to create and manage servers. Features customizable responses, embeds, and colors via a simple dashboard.",
+                "description": "The Blood of Heroes is an immersive chat-based role-playing game, set in a richly detailed fantasy world. Players will follow a written story, which can be twisted easily by the player's decisions. The game is designed to be challenging and fun, with a unique and engaging storyline. The Blood of Heroes is a great way to explore your creativity and imagination.",
                 "link": "https://mask-xpuq.onrender.com/homepage"
             }
         ],
@@ -33,17 +33,17 @@
             {
                 "title": "Careless Whisper Performance",
                 "description": "A saxophone performance at Polygon in Hanoi, Vietnam, on May 25.",
-                "videoLink": "https://youtu.be/aeJ1oMfwDv8"
+                "videoCode": "aeJ1oMfwDv8"
             },
             {
                 "title": "Home",
-                "description": "An original composition.",
-                "videoLink": "https://www.youtube.com/watch?v=zt2kS3zKKvQ"
+                "description": "An original composition. This piece was made as a gift for my family and friends. Love you all.",
+                "videoCode": "zt2kS3zKKvQ"
             },
             {
                 "title": "Sunset",
-                "description": "An original composition.",
-                "videoLink": "https://www.youtube.com/watch?v=Hdk7zulaCC4"
+                "description": "An original composition. This piece was made after looking at the beautiful sunset in my lovely hometown of Hanoi, Vietnam.",
+                "videoCode": "Hdk7zulaCC4"
             }
         ],
         "contentCreation": [
@@ -51,15 +51,48 @@
                 "platform": "YouTube",
                 "channelName": "@nguyen_thien_nam",
                 "link": "https://www.youtube.com/@nguyen_thien_nam",
-                "description": "A collection of simple vlogs documenting my life and experiences."
+                "description": "A collection of vlogs, films, and music videos that I have created."
+            },
+            {
+                "platform": "Tiktok",
+                "channelName": "@nguyen_thien_nam",
+                "link": "https://www.tiktok.com/@nguyen_thien_nam",
+                "description": "A collection of short videos for brainrot and slideshows that consist images of Hanoi, Vietnam."
             }
         ]
     },
-    "socialMedia": {
-        "discord": "Your_Discord_Server_Invite_Link",
-        "youtube": "https://www.youtube.com/@nguyen_thien_nam",
-        "facebook": "Your_Facebook_Profile_Link"
-    },
+    "socialMedia": [
+        {
+            "icon": "fab fa-discord",
+            "title": "Discord",
+            "link": "Your_Discord_Server_Invite_Link"
+        },
+        {
+            "icon": "fab fa-youtube",
+            "title": "YouTube",
+            "link": "https://www.youtube.com/@nguyen_thien_nam"
+        },
+        {
+            "icon": "fab fa-facebook",
+            "title": "Facebook",
+            "link": "Your_Facebook_Profile_Link"
+        },
+        {
+            "icon": "fab fa-instagram",
+            "title": "Instagram",
+            "link": "Your_Instagram_Profile_Link"
+        },
+        {
+            "icon": "fab fa-reddit",
+            "title": "Reddit",
+            "link": "Your_Reddit_Profile_Link"
+        },
+        {
+            "icon": "fab fa-github",
+            "title": "GitHub",
+            "link": "Your_Github_Profile_Link"
+        }
+    ],
     "contactInfo": {
         "email": "soul.isnt.here6@gmail.com"
     },

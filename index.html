@@ -9,7 +9,7 @@
     <!-- Link to External CSS Stylesheet -->
     <link rel="stylesheet" href="styles.css">
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
     <!-- Font Awesome Icons CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Responsive Viewport Meta Tag -->
@@ -66,35 +66,38 @@
             <i class="fa-solid fa-moon"></i>
         </button>
     </nav>
+    <!-- Sections Wrapper -->
+    <main id="sections-wrapper">
+        <!-- About Me Section -->
+        <section id="about">
+            <!-- Section Heading -->
+            <h2>About Me</h2>
+            <!-- Biography Paragraph (Will be populated dynamically) -->
+            <p id="biography"></p>
+        </section>
 
-    <!-- About Me Section -->
-    <section id="about">
-        <!-- Section Heading -->
-        <h2>About Me</h2>
-        <!-- Biography Paragraph (Will be populated dynamically) -->
-        <p id="biography"></p>
-    </section>
+        <!-- Works Section -->
+        <section id="works">
+            <!-- Section Heading -->
+            <h2>Works</h2>
+            <!-- Works Content Container (Will be populated dynamically) -->
+            <div id="works-content"></div>
+        </section>
 
-    <!-- Works Section -->
-    <section id="works">
-        <!-- Section Heading -->
-        <h2>Works</h2>
-        <!-- Works Content Container (Will be populated dynamically) -->
-        <div id="works-content"></div>
-    </section>
+        <!-- Social Media Section -->
+        <section id="social">
+            <!-- Section Heading -->
+            <h2>Social Media</h2>
+            <!-- Social Links Container (Will be populated dynamically) -->
+            <div id="social-links"></div>
+        </section>
 
-    <!-- Social Media Section -->
-    <section id="social">
-        <!-- Section Heading -->
-        <h2>Social Media</h2>
-        <!-- Social Links Container (Will be populated dynamically) -->
-        <div id="social-links"></div>
-    </section>
+    </main>
 
     <!-- Footer Section -->
     <footer id="contact">
         <!-- Contact Information -->
-        <p>Contact me at <a href="#" id="email-link"></a></p>
+        <p id="contact-text">Contact me at <a href="#" id="email-link"></a></p>
         <!-- Footer Text (e.g., Copyright) -->
         <p id="footer-text"></p>
     </footer>

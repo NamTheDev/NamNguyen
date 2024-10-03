@@ -7,10 +7,17 @@
 // Fetch data from config.json and populate the content
 fetch('config.json')
     .then(response => response.json())
-    .then(data => {
+    .then(async data => {
+        data.personalInfo.biography = (await (await fetch(data.personalInfo.biography)).text()).split('\n').join('<br>');
         populateContent(data);
     })
     .catch(error => console.error('Error loading config.json:', error));
+
+// Close modal on clicking the close button
+function closeModal() {
+    document.body.classList.remove('no-interaction');
+    document.body.removeChild(document.querySelector('.artwork-modal'));
+}
 
 /**
  * Populates all the main content sections of the page using the data from config.json
@@ -56,7 +63,7 @@ function populatePersonalInfo(info) {
     // Set the name in the element with id 'info-name'
     document.getElementById('info-name').textContent = info.name;
     // Set the biography in the element with id 'biography'
-    document.getElementById('biography').textContent = info.biography;
+    document.getElementById('biography').innerHTML = info.biography;
 }
 
 // ==================================================
@@ -102,6 +109,14 @@ function populateWorks(projects) {
                     img.src = item.image;
                     img.alt = item.title;
                     img.classList.add('artwork-image');
+                    // Also add functionality to toggle pop out image on click
+                    img.addEventListener('click', () => {
+                        document.body.insertAdjacentHTML('beforeend', `<div class="artwork-modal">
+                        <img src="${item.image}" alt="${item.title}" class="artwork-modal-image">
+                        <button class="artwork-modal-close" onclick="closeModal()">&times;</button>
+                    </div>`);
+                        document.body.classList.toggle('no-interaction');
+                    });
                     workItem.appendChild(img);
                 }
 
@@ -117,12 +132,14 @@ function populateWorks(projects) {
                     link.target = '_blank';
                     link.textContent = 'Learn More';
                     workItem.appendChild(link);
-                } else if (item.videoLink) {
-                    const link = document.createElement('a');
-                    link.href = item.videoLink;
-                    link.target = '_blank';
-                    link.textContent = 'Watch on YouTube';
-                    workItem.appendChild(link);
+                } else if (item.videoCode) {
+                    const iframe = document.createElement('iframe');
+                    iframe.src = `https://www.youtube.com/embed/${item.videoCode}`;
+                    iframe.title = item.title;
+                    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                    iframe.allowFullscreen = true;
+                    iframe.style.marginTop = 'auto';
+                    workItem.appendChild(iframe);
                 }
 
                 // Add the work item to the grid
@@ -169,25 +186,11 @@ function formatCategoryName(category) {
 function populateSocialMedia(socials) {
     const socialLinks = document.getElementById('social-links');
 
-    // Discord
-    if (socials.discord) {
-        const discordLink = createSocialLink('fab fa-discord', 'Join my Discord Server', socials.discord);
-        socialLinks.appendChild(discordLink);
-    }
-
-    // YouTube
-    if (socials.youtube) {
-        const youtubeLink = createSocialLink('fab fa-youtube', 'My YouTube Channel', socials.youtube);
-        socialLinks.appendChild(youtubeLink);
-    }
-
-    // Facebook
-    if (socials.facebook) {
-        const facebookLink = createSocialLink('fab fa-facebook', 'My Facebook Profile', socials.facebook);
-        socialLinks.appendChild(facebookLink);
-    }
-
-    // Add more social platforms if needed
+    // Iterate over each social link and create a link element
+    socials.forEach(({ icon, title, link }) => {
+        const socialLink = createSocialLink(icon, title, link);
+        socialLinks.appendChild(socialLink);
+    });
 }
 
 /**
@@ -199,6 +202,10 @@ function populateSocialMedia(socials) {
  */
 function createSocialLink(iconClass, text, href) {
     const link = document.createElement('a');
+    link.onclick = (event) => {
+        const confirmation = confirm('You sure you want to go to ' + href + '?');   
+        if (!confirmation) event.preventDefault();
+    };
     link.href = href;
     link.target = '_blank';
     link.innerHTML = `<i class="${iconClass}"></i>${text}`;
@@ -312,7 +319,7 @@ window.addEventListener('scroll', () => {
 
     // Determine the current section in view
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - navHeight - 10;
+        const sectionTop = section.offsetTop - navHeight - 200;
         if (window.scrollY >= sectionTop) {
             currentSectionId = section.getAttribute('id');
         }
@@ -345,6 +352,11 @@ toggleThemeButton.addEventListener('click', function () {
     // Show or hide the light mode element based on the current theme state
     lightModeElement.style.display = isLightMode ? 'block' : 'none';
     lightModeElement.style.opacity = isLightMode ? '1' : '0';
+
+    // Invert the images and iframes again  to return to their original state
+    document.querySelectorAll('img, iframe').forEach(element => {
+        element.style.filter = isLightMode ? 'invert(1)' : 'invert(0)';
+    });
 
     // Update the icon to reflect the current theme
     toggleThemeIcon.classList.toggle('fa-sun', isLightMode);
