@@ -7,14 +7,9 @@
     "projects": {
         "development": [
             {
-                "name": "M4sk Discord Bot",
-                "description": "A versatile Discord bot offering fun and utility commands, including an economy system and RPG adventure game. Not only that, M4sk provides a reputation-based system for moderation which can help moderators, administrators and owners manage the server way more efficient. There are also features for customizable responses, embeds, and colors via a simple dashboard.",
-                "link": "https://mask-xpuq.onrender.com/homepage"
-            },
-            {
-                "name": "The Blood of Heroes",
-                "description": "The Blood of Heroes is an immersive chat-based role-playing game, set in a richly detailed fantasy world. Players will follow a written story, which can be twisted easily by the player's decisions. The game is designed to be challenging and fun, with a unique and engaging storyline. The Blood of Heroes is a great way to explore your creativity and imagination.",
-                "link": "https://mask-xpuq.onrender.com/homepage"
+                "name": "Brainrot API",
+                "description": "Provides random brainrot quotes, facts, dictionary words, names, and jokes. Free and opensource, can be self-hosted and self-deployed. Built using Elysia and Bun.",
+                "link": "https: //brainrot-api-c9w8.onrender.com"
             }
         ],
         "art": [
