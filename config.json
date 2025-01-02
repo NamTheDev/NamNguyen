@@ -9,7 +9,7 @@
             {
                 "name": "Brainrot API",
                 "description": "Provides random brainrot quotes, facts, dictionary words, names, and jokes. Free and opensource, can be self-hosted and self-deployed. Built using Elysia and Bun.",
-                "link": "https: //brainrot-api-c9w8.onrender.com"
+                "link": "https://brainrot-api-c9w8.onrender.com"
             }
         ],
         "art": [
